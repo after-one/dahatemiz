@@ -1,9 +1,9 @@
-# DahaMiz
+# dahatemiz
 
 **Türkiye’den başlayarak çevresel sorunların güvenli biçimde bildirilmesini, topluluk katılımını ve doğrulanabilir
 çevresel etkiyi bir araya getirmeyi amaçlayan mobil platform.**
 
-DahaMiz vatandaşların çevresel sorunları fotoğraf/video ve konum bilgisiyle raporlayabilmesine; moderatörlerin
+dahatemiz vatandaşların çevresel sorunları fotoğraf/video ve konum bilgisiyle raporlayabilmesine; moderatörlerin
 gönderileri incelemesine; yetkili kurumların ise yalnızca kendi organizasyonlarına ait dosyaları güvenli biçimde
 değerlendirmesine yardımcı olur. Topluluk tarafında harita, etkinlikler, görevler ve olumlu katılımı ödüllendiren
 özellikler bulunur.
