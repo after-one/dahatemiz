@@ -1,0 +1,43 @@
+{
+  "name": "dahamiz-platform",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Environmental accountability and community platform — monorepo root",
+  "engines": {
+    "node": ">=22.13.0",
+    "pnpm": ">=9.0.0"
+  },
+  "packageManager": "pnpm@10.33.2",
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\" --ignore-path .prettierignore",
+    "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,json,md}\" --ignore-path .prettierignore",
+    "typecheck": "turbo run typecheck",
+    "test": "turbo run test && pnpm media-worker:test",
+    "test:ci": "turbo run test --concurrency=1 && pnpm media-worker:test",
+    "media-worker:test": "python3 -m unittest discover -s services/media-worker/tests -v",
+    "clean": "turbo run clean",
+    "api:dev": "pnpm --filter @dahamiz/api dev",
+    "api:build": "pnpm --filter @dahamiz/api build",
+    "mobile:start": "pnpm --filter @dahamiz/mobile start",
+    "mobile:android": "pnpm --filter @dahamiz/mobile android",
+    "mobile:ios": "pnpm --filter @dahamiz/mobile ios",
+    "prepare": "node scripts/prepare.js"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^20.17.0",
+    "eslint": "^10.13.0",
+    "prettier": "^3.3.3",
+    "turbo": "^2.3.3",
+    "typescript": "^5.6.3",
+    "typescript-eslint": "^8.71.2"
+  },
+  "pnpm": {
+    "overrides": {
+      "typescript": "^5.6.3"
+    }
+  }
+}

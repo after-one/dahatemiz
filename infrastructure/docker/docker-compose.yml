@@ -1,0 +1,27 @@
+# Local development dependencies — NOT for production use.
+# Start with: docker compose up -d
+# Stop with: docker compose down
+
+services:
+  postgres:
+    image: postgis/postgis:16-3.4-alpine
+    container_name: dahamiz-postgres
+    environment:
+      POSTGRES_USER: dahamiz
+      POSTGRES_PASSWORD: dahamiz_dev
+      POSTGRES_DB: dahamiz_dev
+    ports:
+      - "5432:5432"
+    volumes:
+      - dahamiz-postgres-data:/var/lib/postgresql/data
+      - ./init-scripts/01-extensions.sql:/docker-entrypoint-initdb.d/01-extensions.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U dahamiz -d dahamiz_dev"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+volumes:
+  dahamiz-postgres-data:
+    name: dahamiz-postgres-data

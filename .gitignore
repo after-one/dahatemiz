@@ -1,0 +1,79 @@
+# Dependencies
+node_modules/
+**/node_modules/
+.pnpm-store/
+
+# Build outputs
+dist/
+**/dist/
+.next/
+**/.next/
+out/
+build/
+
+# Expo
+.expo/
+**/.expo/
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+web-build/
+
+# Native build folders
+ios/Pods/
+android/.gradle/
+android/app/build/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# Secrets (never commit)
+.env
+.env.*
+*.env
+**/.env
+**/.env.*
+!.env.example
+!**/.env.example
+
+# Testing
+coverage/
+**/coverage/
+*.lcov
+
+# Python media worker
+__pycache__/
+**/__pycache__/
+*.py[cod]
+.venv/
+services/media-worker/.venv/
+
+# Editor artifacts
+.DS_Store
+Thumbs.db
+.vscode/settings.json
+.idea/
+*.swp
+*.swo
+
+# Turbo
+.turbo/
+**/.turbo/
+
+# TypeScript build info
+*.tsbuildinfo
+**/.tsbuildinfo
+
+# Terraform state (never commit)
+infrastructure/terraform/*.tfstate
+infrastructure/terraform/*.tfstate.backup
+infrastructure/terraform/.terraform/
+**/.firebase/
+firebase-debug.log
+ui-debug.log

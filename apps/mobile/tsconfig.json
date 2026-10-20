@@ -1,0 +1,17 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "jsx": "react-native",
+    "lib": ["ES2022"],
+    "moduleResolution": "bundler",
+    "customConditions": ["react-native"],
+    "target": "ES2022",
+    "types": ["jest"],
+    "paths": {
+      "@dahamiz/design-tokens": ["../../packages/design-tokens/src/index.ts"],
+      "@dahamiz/shared-types": ["../../packages/shared-types/src/index.ts"]
+    }
+  },
+  "include": ["**/*.ts", "**/*.tsx", ".expo/types/**/*.d.ts", "expo-env.d.ts", ".expo/types/**/*.ts"],
+  "exclude": ["node_modules"]
+}

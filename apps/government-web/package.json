@@ -1,0 +1,11 @@
+{
+  "name": "@dahamiz/government-web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "lint": "eslint src",
+    "start": "node server.mjs"
+  }
+}
